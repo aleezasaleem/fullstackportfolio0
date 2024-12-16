@@ -1,0 +1,19 @@
+.home {
+  background-color: white;
+}
+
+.animate-color {
+  animation: colorChange 2s infinite;
+}
+
+@keyframes colorChange {
+  0% {
+    color: red;
+  }
+  50% {
+    color: blue;
+  }
+  100% {
+    color: green;
+  }
+}

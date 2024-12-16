@@ -1,0 +1,113 @@
+/* General Form Styling */
+.contact-form {
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  animation: fadeInUp 1s ease-out;
+  text-align: center;
+}
+
+/* Animation for form appearance */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Heading */
+.contact-heading {
+  font-size: 2.5rem;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 1rem;
+  transition: color 0.3s ease;
+}
+
+/* Helper Text */
+.contact-helper-text {
+  color: #0077b5; /* LinkedIn Blue */
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+/* Input Fields */
+.contact-input {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+  font-size: 1.1rem;
+  background-color: #f7fafc;
+  transition: all 0.3s ease;
+}
+
+.contact-input:focus {
+  border-color: #38b2ac; /* Teal color on focus */
+  box-shadow: 0 0 0 3px rgba(56, 178, 172, 0.3); /* Focus ring */
+}
+
+.contact-input::placeholder {
+  color: #a0aec0;
+}
+
+/* Submit Button */
+.contact-button {
+  width: 100%;
+  padding: 1.2rem;
+  background-color: #38b2ac; /* Teal color */
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 1.5rem;
+}
+
+.contact-button:hover {
+  background-color: #319795; /* Darker teal on hover */
+  transform: scale(1.05);
+}
+
+.contact-button:active {
+  background-color: #2c7a7b; /* Even darker teal */
+  transform: scale(1);
+}
+
+/* Smooth Scrolling Animation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .contact-form {
+    padding: 1.5rem;
+  }
+
+  .contact-heading {
+    font-size: 2rem;
+  }
+
+  .contact-helper-text {
+    font-size: 0.9rem;
+  }
+
+  .contact-input {
+    padding: 0.9rem;
+  }
+
+  .contact-button {
+    padding: 1rem;
+  }
+}
