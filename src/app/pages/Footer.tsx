@@ -72,6 +72,7 @@ const Footer = () => {
           </Link>
         </Box>
       </Stack>
+      <br />
       <Text fontWeight="bold" mb={4} textStyle="sm" color="teal.600">
         Project by Aleeza Saleem © 2024
       </Text>

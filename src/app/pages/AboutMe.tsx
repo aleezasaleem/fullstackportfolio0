@@ -45,19 +45,14 @@ import Logo from "../images/ee.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
 export const AboutMe = () => {
-  // You can use Chakra's useBreakpointValue hook to define different image sizes
   const imageSize = useBreakpointValue({ base: "100%", md: "50%" });
   const MotionButton = motion(Button);
   return (
     <HStack wrap="wrap" justify="center" spacing={4} m={5}>
       <DrawerRoot size="full">
         {" "}
-        {/* Full window drawer */}
         <DrawerBackdrop />
         <DrawerTrigger asChild>
-          {/* <Button colorPalette="teal" size="lg" variant="outline" m={3}>
-            About Me <FaArrowRightLong />
-          </Button> */}
           <MotionButton
             colorScheme="teal"
             size="lg"
