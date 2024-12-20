@@ -109,15 +109,21 @@ const Section = () => {
               direction={{ base: "column", sm: "row" }}
               mt={4}
             >
-              <Button
-                style={{ border: "1px solid green" }}
-                colorScheme="teal"
-                size="lg"
-                variant="outline"
-                width={{ base: "100%", sm: "auto" }}
+              <a
+                href="/resume/Aleeza_ATS.pdf"
+                download="AleezaSaleem_Resume.pdf"
               >
-                Resume <HiOutlineDocumentArrowDown />
-              </Button>
+                <Button
+                  style={{ border: "1px solid green" }}
+                  colorScheme="teal"
+                  size="lg"
+                  variant="outline"
+                  width={{ base: "100%", sm: "auto" }}
+                >
+                  Resume
+                  <HiOutlineDocumentArrowDown />
+                </Button>
+              </a>
               <AboutMe />
               <Button variant="outline" width={{ base: "100%", sm: "auto" }}>
                 <Link href="/Certi">Certificate</Link>
