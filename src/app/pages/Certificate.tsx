@@ -8,15 +8,15 @@ import {
   DrawerContent,
   DrawerFooter,
   DrawerHeader,
-  DrawerRoot,
   DrawerTitle,
   DrawerTrigger,
+  DrawerRoot,
 } from "@/components/ui/drawer";
 
 const Certificate = () => {
   return (
     <HStack wrap="wrap">
-      <For each={["top"]}>
+      <For each={["top", "bottom"]}>
         {(placement) => (
           <DrawerRoot key={placement} placement={placement}>
             <DrawerBackdrop />
@@ -26,8 +26,8 @@ const Certificate = () => {
               </Button>
             </DrawerTrigger>
             <DrawerContent
-              roundedTop={placement === "bottom" ? "l3" : undefined}
-              roundedBottom={placement === "top" ? "l3" : undefined}
+              roundedTop={placement === "top" ? "l3" : undefined} // Fix the comparison
+              roundedBottom={placement === "bottom" ? "l3" : undefined} // Fix the comparison
             >
               <DrawerHeader>
                 <DrawerTitle>Drawer Title</DrawerTitle>

@@ -44,13 +44,13 @@ import { GiTBrick } from "react-icons/gi";
 import Logo from "../images/ee.jpg";
 import Image from "next/image";
 import { motion } from "framer-motion";
+
 export const AboutMe = () => {
   const imageSize = useBreakpointValue({ base: "100%", md: "50%" });
   const MotionButton = motion(Button);
   return (
-    <HStack wrap="wrap" justify="center" spacing={4} m={5}>
+    <HStack wrap="wrap" justify="center" gap={4} m={5}>
       <DrawerRoot size="full">
-        {" "}
         <DrawerBackdrop />
         <DrawerTrigger asChild>
           <MotionButton
@@ -59,13 +59,13 @@ export const AboutMe = () => {
             variant="outline"
             m={3}
             animate={{
-              scale: [1, 1.2, 1], // Scale animation (zoom in and zoom out)
+              scale: [1, 1.2, 1],
             }}
             transition={{
-              duration: 1, // Duration for one zoom cycle
-              repeat: Infinity, // Repeat infinitely
-              repeatType: "loop", // Infinite loop
-              ease: "easeInOut", // Smooth easing
+              duration: 1,
+              repeat: Infinity,
+              repeatType: "loop",
+              ease: "easeInOut",
             }}
           >
             About Me <FaArrowRightLong style={{ marginLeft: "8px" }} />
@@ -101,16 +101,14 @@ export const AboutMe = () => {
             </Text>
             <br />
             <BootstrapContainer>
-              {/* Main Flex Container for side-by-side on desktop */}
               <Flex
                 direction={{ base: "column", md: "row" }}
                 justify="space-between"
                 align="center"
                 p={4}
               >
-                {/* Left Column with Buttons */}
                 <Box flex={1} mb={{ base: 6, md: 0 }}>
-                  <HStack wrap="wrap" justify="start" spacing={4}>
+                  <HStack wrap="wrap" justify="start" gap={4}>
                     <Button variant="outline" m={2}>
                       Html5 <FaHtml5 style={{ color: "orange" }} />
                     </Button>
@@ -179,8 +177,6 @@ export const AboutMe = () => {
                     </Button>
                   </HStack>
                 </Box>
-
-                {/* Right Column with Image */}
                 <Box flex={1} textAlign="center">
                   <Image
                     src={Logo}
@@ -205,3 +201,4 @@ export const AboutMe = () => {
     </HStack>
   );
 };
+

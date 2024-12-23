@@ -1,7 +1,7 @@
 "use client"; // To specify this as a client-side component
 
 import React, { useState } from "react";
-import Image from "next/image";
+import Image, { StaticImageData } from "next/image";
 
 // Import certificate images
 import CerOne from "../images/certificates/1.png";
@@ -12,12 +12,12 @@ import "../styles/cer1.css";
 import { Text } from "@chakra-ui/react";
 
 const Page = () => {
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedImage, setSelectedImage] = useState<StaticImageData | null>(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const certificates = [CerOne, CerTwo, CerThree, CerFour];
 
-  const openModal = (certificate: string) => {
+  const openModal = (certificate: StaticImageData) => {
     setSelectedImage(certificate);
     setIsModalOpen(true);
   };
@@ -87,11 +87,11 @@ const Page = () => {
         ))}
       </div>
 
-      {isModalOpen && (
+      {isModalOpen && selectedImage && (
         <div className="modal-overlay" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
             <Image
-              src={selectedImage!}
+              src={selectedImage}
               alt="Full Certificate"
               layout="intrinsic"
               width={800}

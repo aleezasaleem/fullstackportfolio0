@@ -15,34 +15,15 @@ const NavigationBar = () => {
 
   const navbarProps = {
     items: [
-      {
-        text: "Home",
-        link: "/",
-      },
-      {
-        text: "SKILLS",
-        link: "#skills",
-      },
-      {
-        text: "CONTACT",
-        link: "#Contact",
-      },
-
-      {
-        text: "EXPERIENCE",
-        link: "#exp",
-      },
-      {
-        text: "PROJECTS",
-        link: "#project",
-      },
-      {
-        text: "EDUCATION",
-        link: "#edugation",
-      },
+      { text: "Home", link: "/" },
+      { text: "SKILLS", link: "#skills" },
+      { text: "CONTACT", link: "#Contact" },
+      { text: "EXPERIENCE", link: "#exp" },
+      { text: "PROJECTS", link: "#project" },
+      { text: "EDUCATION", link: "#education" },
     ],
     logo: {
-      text: "",
+      text: "", // Add logo text or image here if needed
     },
     style: {
       barStyles: {

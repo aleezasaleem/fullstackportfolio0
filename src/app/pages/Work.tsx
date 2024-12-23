@@ -1,3 +1,4 @@
+"use client"
 import React from "react";
 import Projects from "./Projects"; // Assuming this contains an array of 14 project objects.
 import Image from "next/image";
